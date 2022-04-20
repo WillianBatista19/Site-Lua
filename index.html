@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PMT</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Logo</a>
+        <ul>
+            <li><a href="#" class="ativo">Home</a></li>
+            <li><a href="#">Sobre</a></li>
+            <li><a href="#">Trabalhos</a></li>
+            <li><a href="#">Contato</a></li>
+        </ul>
+    </header>
+    <section>
+        <img src="imagens/stars.png" id="stars">
+        <img src="imagens/moon.png" id="moon">
+        <img src="imagens/mountains_behind.png" id="mountains_behind">
+        <h2 id="texto">Bem-Vindo</h2>
+        <a href="#des" id="btn">Aprenda</a>
+        <img src="imagens/mountains_front.png" id="mountains_front">
+    </section>
+    <div class="des" id="des">
+        <h2>Projeto Monitoria Total</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias incidunt quisquam aliquid quam placeat vel nisi sed ipsa illo cupiditate eius ducimus, ea eaque, fuga odit eos officia unde ullam? Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius sint deleniti error aspernatur, molestias magnam fuga necessitatibus voluptas unde molestiae nisi. Illo quo, eius dolor ab dolorem sed animi a! <br><br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias incidunt quisquam aliquid quam placeat vel nisi sed ipsa illo cupiditate eius ducimus, ea eaque, fuga odit eos officia unde ullam? Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias illum ex id voluptatem sit numquam, quidem officia magnam natus soluta nemo neque, ab dicta. Asperiores iusto optio eos sapiente recusandae. <br><br>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias incidunt quisquam aliquid quam placeat vel nisi sed ipsa illo cupiditate eius ducimus, ea eaque, fuga odit eos officia unde ullam? Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore tenetur enim officiis sint ipsum aliquid molestiae sequi necessitatibus nostrum, voluptatem accusamus at explicabo cumque veniam dignissimos excepturi laboriosam dolor deleniti! <br><br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias incidunt quisquam aliquid quam placeat vel nisi sed ipsa illo cupiditate eius ducimus, ea eaque, fuga odit eos officia unde ullam? Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias illum ex id voluptatem sit numquam, quidem officia magnam natus soluta nemo neque, ab dicta. Asperiores iusto optio eos sapiente recusandae. <br><br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias incidunt quisquam aliquid quam placeat vel nisi sed ipsa illo cupiditate eius ducimus, ea eaque, fuga odit eos officia unde ullam? Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias illum ex id voluptatem sit numquam, quidem officia magnam natus soluta nemo neque, ab dicta. Asperiores iusto optio eos sapiente recusandae. <br><br></p>
+    </div>
+
+    <script>
+        let stars =  document.getElementById('stars');
+        let moon =  document.getElementById('moon');
+        let mountains_behind =  document.getElementById('mountains_behind');
+        let texto =  document.getElementById('texto');
+        let btn =  document.getElementById('btn');
+        let mountains_front =  document.getElementById('mountains_front');
+        let header = document.querySelector('header')
+
+        window.addEventListener('scroll', function(){
+            let value = window.scrollY;
+            stars.style.left = value * 0.25 + 'px';
+            moon.style.top = value * 1.05 + 'px';
+            mountains_behind.style.top = value * 0.5 + 'px';
+            mountains_front.style.top = value * 0 + 'px';
+            texto.style.marginRight = value * 4 + 'px';
+            texto.style.marginTop = value * 1.5 + 'px';
+            btn.style.marginTop = value * 1.5 + 'px';
+            header.style.top = value * 0.5 + 'px'
+        })
+    </script>
+</body>
+</html>
